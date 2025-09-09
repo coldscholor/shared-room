@@ -395,8 +395,8 @@ A: 检查以下几点：
 ## 联系方式
 
 如有问题或建议，请通过以下方式联系：
-- 邮箱: developer@example.com
-- 项目地址: https://github.com/your-username/shared-room
+- 邮箱: coldscholor@163.com
+- 项目地址: https://github.com/coldscholor/shared-room
 
 ## 更新日志
 
