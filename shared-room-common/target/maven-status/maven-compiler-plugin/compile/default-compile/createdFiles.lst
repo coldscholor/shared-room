@@ -1,0 +1,11 @@
+com\sharedroom\common\entity\Seat.class
+com\sharedroom\common\exception\BusinessException.class
+com\sharedroom\common\entity\StudyRoom.class
+com\sharedroom\common\entity\Order.class
+com\sharedroom\common\result\Result.class
+com\sharedroom\common\result\ResultCode.class
+com\sharedroom\common\utils\UserContext.class
+com\sharedroom\common\exception\GlobalExceptionHandler.class
+com\sharedroom\common\entity\Payment.class
+com\sharedroom\common\utils\JwtUtils.class
+com\sharedroom\common\entity\User.class

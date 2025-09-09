@@ -1,0 +1,2 @@
+com\sharedroom\gateway\GatewayApplication.class
+com\sharedroom\gateway\filter\AuthGlobalFilter.class

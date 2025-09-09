@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/shared-room-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-notification/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-notification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-payment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-seat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-seat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-room-user/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-notification/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-notification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-reservation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-reservation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-room/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-seat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-seat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-user/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

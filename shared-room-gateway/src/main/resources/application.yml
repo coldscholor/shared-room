@@ -1,0 +1,82 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: shared-room-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+      config:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yml
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # 用户服务路由
+        - id: user-service
+          uri: lb://shared-room-user
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+        # 座位服务路由
+        - id: seat-service
+          uri: lb://shared-room-seat
+          predicates:
+            - Path=/seat/**
+          filters:
+            - StripPrefix=1
+        # 订单服务路由
+        - id: order-service
+          uri: lb://shared-room-order
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
+        # 支付服务路由
+        - id: payment-service
+          uri: lb://shared-room-payment
+          predicates:
+            - Path=/payment/**
+          filters:
+            - StripPrefix=1
+        # 通知服务路由
+        - id: notification-service
+          uri: lb://shared-room-notification
+          predicates:
+            - Path=/notification/**
+          filters:
+            - StripPrefix=1
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "*"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
+  redis:
+    host: 120.46.5.5
+    port: 6379
+    password: 123456
+    database: 0
+    timeout: 3000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+
+logging:
+  level:
+    com.sharedroom.gateway: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n"

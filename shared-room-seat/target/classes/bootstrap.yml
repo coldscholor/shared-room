@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shared-room-seat
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yml
+        refresh: true
+        shared-configs:
+          - data-id: shared-seata.yaml
+            group: SEATA_GROUP
+            refresh: true
+      discovery:
+        server-addr: localhost:8848

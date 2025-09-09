@@ -1,0 +1,11 @@
+com\sharedroom\user\UserApplication.class
+com\sharedroom\user\config\WebConfig.class
+com\sharedroom\user\controller\UserController.class
+com\sharedroom\user\service\UserService.class
+com\sharedroom\user\dto\LoginDTO.class
+com\sharedroom\user\dto\RegisterDTO.class
+com\sharedroom\user\service\impl\UserServiceImpl.class
+com\sharedroom\user\interceptor\UserInterceptor.class
+com\sharedroom\user\mapper\UserMapper.class
+com\sharedroom\user\vo\UserVO.class
+com\sharedroom\user\vo\LoginVO.class

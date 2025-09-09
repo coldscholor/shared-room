@@ -1,0 +1,178 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: shared-room-notification
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+      config:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yml
+        refresh-enabled: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shared_room_notification?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall,slf4j
+      connection-properties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
+      web-stat-filter:
+        enabled: true
+        url-pattern: "/*"
+        exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        enabled: true
+        url-pattern: "/druid/*"
+        reset-enable: false
+        login-username: admin
+        login-password: 123456
+  redis:
+    host: 120.46.5.5
+    port: 6379
+    password: 123456
+    database: 03
+    timeout: 10000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: your-email@qq.com
+    password: your-email-password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+management:
+  health:
+    mail:
+      enabled: false
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-locations: classpath*:mapper/**/*.xml
+
+logging:
+  level:
+    com.sharedroom.notification: debug
+    org.springframework.cloud.openfeign: debug
+    org.springframework.web: debug
+    org.springframework.web.socket: debug
+
+
+
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: notification-producer-group
+    send-message-timeout: 3000
+    retry-times-when-send-failed: 3
+  consumer:
+    group: notification-consumer-group
+    consume-timeout: 15000
+    max-reconsume-times: 3
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 5000
+        read-timeout: 10000
+        logger-level: basic
+  hystrix:
+    enabled: false
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+# 通知配置
+notification:
+  # WebSocket配置
+  websocket:
+    # 心跳间隔（秒）
+    heartbeat-interval: 30
+    # 连接超时时间（秒）
+    connection-timeout: 60
+  # 邮件配置
+  email:
+    # 发件人名称
+    from-name: 共享自习室
+    # 邮件模板路径
+    template-path: classpath:/templates/email/
+  # 短信配置
+  sms:
+    # 短信服务提供商
+    provider: aliyun
+    # 签名
+    sign-name: 共享自习室
+    # 模板ID
+    template-id: SMS_123456789
+  # 推送配置
+  push:
+    # 批量推送大小
+    batch-size: 100
+    # 推送重试次数
+    retry-times: 3
+    # 推送超时时间（秒）
+    timeout: 10
+  # 清理配置
+  cleanup:
+    # 通知保留天数
+    retention-days: 30
+    # 清理任务执行时间（cron表达式）
+    cron: "0 0 2 * * ?"
+
+# 异步任务配置
+task:
+  execution:
+    pool:
+      core-size: 5
+      max-size: 20
+      queue-capacity: 100
+      keep-alive: 60s
+    thread-name-prefix: notification-async-

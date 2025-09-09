@@ -1,0 +1,12 @@
+com\sharedroom\seat\controller\SeatController.class
+com\sharedroom\seat\vo\SeatVO.class
+com\sharedroom\seat\SeatApplication.class
+com\sharedroom\seat\config\WebConfig.class
+com\sharedroom\seat\dto\SeatSearchDTO.class
+com\sharedroom\seat\entity\Seat.class
+com\sharedroom\seat\interceptor\UserInterceptor.class
+com\sharedroom\seat\config\RedissonConfig.class
+com\sharedroom\seat\service\SeatService.class
+com\sharedroom\seat\config\RedisConfig.class
+com\sharedroom\seat\mapper\SeatMapper.class
+com\sharedroom\seat\service\impl\SeatServiceImpl.class

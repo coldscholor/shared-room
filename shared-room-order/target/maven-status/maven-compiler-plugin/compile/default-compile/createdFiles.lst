@@ -1,0 +1,12 @@
+com\sharedroom\order\feign\SeatFeignClient.class
+com\sharedroom\order\OrderApplication.class
+com\sharedroom\order\interceptor\UserInterceptor.class
+com\sharedroom\order\config\SeataConfig.class
+com\sharedroom\order\vo\OrderVO.class
+com\sharedroom\order\service\OrderService.class
+com\sharedroom\order\controller\OrderController.class
+com\sharedroom\order\dto\CreateOrderDTO.class
+com\sharedroom\order\listener\OrderExpireListener.class
+com\sharedroom\order\config\WebConfig.class
+com\sharedroom\order\mapper\OrderMapper.class
+com\sharedroom\order\service\impl\OrderServiceImpl.class

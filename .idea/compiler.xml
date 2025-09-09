@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="shared-room-gateway" />
+        <module name="shared-room-payment" />
+        <module name="shared-room-notification" />
+        <module name="shared-room-order" />
+        <module name="shared-room-common" />
+        <module name="shared-room-user" />
+        <module name="shared-room-seat" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="shared-study-room" target="1.8" />
+      <module name="study-api" target="1.8" />
+      <module name="study-common" target="1.8" />
+      <module name="study-gateway" target="1.8" />
+      <module name="study-notification" target="1.8" />
+      <module name="study-payment" target="1.8" />
+      <module name="study-reservation" target="1.8" />
+      <module name="study-room" target="1.8" />
+      <module name="study-seat" target="1.8" />
+      <module name="study-user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="shared-room-common" options="" />
+      <module name="shared-room-gateway" options="" />
+      <module name="shared-room-notification" options="" />
+      <module name="shared-room-order" options="" />
+      <module name="shared-room-payment" options="" />
+      <module name="shared-room-seat" options="" />
+      <module name="shared-room-user" options="" />
+    </option>
+  </component>
+</project>

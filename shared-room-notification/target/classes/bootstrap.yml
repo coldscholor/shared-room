@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: shared-room-notification
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: shared-config.yml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: shared-seata.yaml
+            group: SEATA_GROUP
+            refresh: true
+      discovery:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
